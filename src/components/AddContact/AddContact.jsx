@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddContact.css";
 
 const AddContact = (props) => {
   let [name, setName] = useState("");
@@ -6,16 +7,16 @@ const AddContact = (props) => {
   let [phone, setPhone] = useState("");
 
   function handleClick() {
-   let newContact = {
+    let newContact = {
       name,
       surname,
       phone,
-      id: Date.now()
-   }
-   props.handleNewContact(newContact)
-   setName('');
-   setSurname('');
-   setPhone('');
+      id: Date.now(),
+    };
+    props.handleNewContact(newContact);
+    setName("");
+    setSurname("");
+    setPhone("");
   }
 
   return (
